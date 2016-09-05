@@ -77,15 +77,15 @@ class wso2cep::params {
       presenter_enabled=> false,
       worker_enabled   => true,
       eventSync        =>{
-        hostName => "%{::ipaddress}",
+        hostName => "${::ipaddress}",
         port     => 11224
       },
       management       =>{
-        hostName=> "%{::ipaddress}",
+        hostName=> "${::ipaddress}",
         port    => 10005
       },
       presentation     =>{
-        hostName=> "%{::ipaddress}",
+        hostName=> "${::ipaddress}",
         port    => 11002
       }
     }

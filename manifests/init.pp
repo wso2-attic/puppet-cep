@@ -124,7 +124,6 @@ class wso2cep (
     wso2_user                       => $wso2_user,
     wso2_group                      => $wso2_group,
     template_list                   => $template_list,
-
     directory_list                  => $directory_list,
     file_list                       => $file_list,
     system_file_list                => $system_file_list,
