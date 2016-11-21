@@ -40,7 +40,7 @@ wso2::template_list:
 #  - "repository/components/lib/%{hiera('wso2::datasources::mysql::connector_jar')}"
 
 wso2::thrift_data_agent:
-  queueSize: 1000
+  queueSize: 100
   batchSize: 100
   corePoolSize: 100
   maxPoolSize: 100
