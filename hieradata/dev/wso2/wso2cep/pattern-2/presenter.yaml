@@ -31,17 +31,17 @@ wso2::clustering:
   wka:
     members:
       -
-        hostname: 192.168.100.2
+        hostname: 192.168.100.51
         port: 4000
       -
-        hostname: 192.168.100.3
+        hostname: 192.168.100.52
         port: 4000
 # AWS membership scheme
 #   membership_scheme: aws
 #   aws:
 #     access_key: access-key
 #     secret_key: secret-key
-#     security_group: security-group 
+#     security_group: security-group
 #     host_header: host-header
 #     region: region
 #     tag_key: tag-key
@@ -113,7 +113,7 @@ wso2::master_datasources:
     name: WSO2_CONFIG_DB
     description: The datasource used for config registry
     driver_class_name: "%{hiera('wso2::datasources::mysql::driver_class_name')}"
-    url: jdbc:mysql://10.100.7.110:3306/WSO2_CONFIG_DB?autoReconnect=true
+    url: jdbc:mysql://192.168.100.53:3306/WSO2_CONFIG_DB?autoReconnect=true
     username: "%{hiera('wso2::datasources::mysql::username')}"
     password: "%{hiera('wso2::datasources::mysql::password')}"
     jndi_config: jdbc/WSO2_CONFIG_DB
@@ -128,7 +128,7 @@ wso2::master_datasources:
     name: WSO2_GOV_DB
     description: The datasource used for gov registry
     driver_class_name: "%{hiera('wso2::datasources::mysql::driver_class_name')}"
-    url: jdbc:mysql://10.100.7.110:3306/WSO2_REG_DB?autoReconnect=true
+    url: jdbc:mysql://192.168.100.53:3306/WSO2_REG_DB?autoReconnect=true
     username: "%{hiera('wso2::datasources::mysql::username')}"
     password: "%{hiera('wso2::datasources::mysql::password')}"
     jndi_config: jdbc/WSO2_GOV_DB
@@ -143,7 +143,7 @@ wso2::master_datasources:
     name: WSO2_USER_DB
     description: The datasource is used for user mangement and userstore
     driver_class_name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.100.7.110:3306/WSO2_USER_DB?autoReconnect=true
+    url: jdbc:mysql://192.168.100.53:3306/WSO2_USER_DB?autoReconnect=true
     username: "%{hiera('wso2::datasources::mysql::username')}"
     password: "%{hiera('wso2::datasources::mysql::password')}"
     jndi_config: jdbc/WSO2_USER_DB
